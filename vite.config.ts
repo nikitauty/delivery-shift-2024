@@ -18,6 +18,7 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/shared/hooks'),
       '@api': path.resolve(__dirname, './src/shared/api'),
       '@store': path.resolve(__dirname, './src/shared/store'),
+      '@types': path.resolve(__dirname, './src/shared/types'),
     },
   },
 });

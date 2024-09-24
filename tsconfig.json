@@ -19,7 +19,8 @@
       "@pages/*": ["src/pages/*"],
       "@hooks/*": ["src/shared/hooks/*"],
       "@api/*": ["src/shared/api/*"],
-      "@store/*": ["src/shared/store/*"]
+      "@store/*": ["src/shared/store/*"],
+      "@types": ["src/shared/types"]
     },
 
     /* Linting */
