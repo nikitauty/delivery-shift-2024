@@ -7,6 +7,7 @@
     "prepare": "husky",
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "format": "npx prettier . --write",
     "lint": "eslint . --fix",
     "lint-inspector": "npx @eslint/config-inspector",
     "preview": "vite preview"
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@nikitau/eslint": "^2.0.2",
+    "@nikitau/prettier": "^1.1.0",
     "@types/node": "^22.5.4",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -28,10 +30,14 @@
     "globals": "^15.9.0",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
     "typescript": "^5.5.3",
     "vite": "^5.4.1"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --no-error-on-unmatched-pattern --fix"
+    "*.{ts, tsx}": [
+      "prettier --write",
+      "eslint --no-error-on-unmatched-pattern --fix"
+    ]
   }
 }

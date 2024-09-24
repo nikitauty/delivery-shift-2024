@@ -1,7 +1,47 @@
 {
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
-  "files": []
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "esnext"],
+    "useDefineForClassFields": true,
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+
+    /* Aliases */
+    "paths": {
+      "@/*": ["src/*"],
+      "@ui/*": ["src/shared/components/ui/*"],
+      "@images/*": ["assets/images/*"],
+      "@icons/*": ["assets/icons/*"],
+      "@components/*": ["src/shared/components/*"],
+      "@consts/*": ["src/shared/consts/*"],
+      "@appTypes/*": ["src/shared/types/*"],
+      "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/shared/hooks/*"],
+      "@api/*": ["src/shared/api/*"],
+      "@store/*": ["src/shared/store/*"]
+    },
+
+    /* Linting */
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "allowImportingTsExtensions": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmit": true,
+    "outDir": "./dist/",
+    "allowSyntheticDefaultImports": true,
+
+    /* Bundler mode */
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  },
+
+  "include": ["src/**/*.ts", "src/**/*.tsx", "@types/*", "./.eslint.config.mjs"],
+
+  "exclude": ["node_modules"]
 }
