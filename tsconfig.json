@@ -12,11 +12,10 @@
     "paths": {
       "@/*": ["src/*"],
       "@ui/*": ["src/shared/components/ui/*"],
-      "@images/*": ["assets/images/*"],
       "@icons/*": ["assets/icons/*"],
+      "@images/*": ["assets/images/*"],
       "@components/*": ["src/shared/components/*"],
-      "@consts/*": ["src/shared/consts/*"],
-      "@appTypes/*": ["src/shared/types/*"],
+      "@constants/*": ["src/shared/constants/*"],
       "@pages/*": ["src/pages/*"],
       "@hooks/*": ["src/shared/hooks/*"],
       "@api/*": ["src/shared/api/*"],
