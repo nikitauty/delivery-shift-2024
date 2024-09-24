@@ -6,11 +6,11 @@ export default eslint(
     jsx: true,
     jsxA11y: true,
     react: true,
-    stylistic: true
+    stylistic: false,
   },
   {
     rules: {
-      'nikitau-react/prop-types': 'off'
-    }
+      'nikitau-react/prop-types': 'off',
+    },
   }
 );
