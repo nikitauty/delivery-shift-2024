@@ -1,16 +1,16 @@
 import { api } from '@api/instance';
 import type { User } from '@types';
 
-export interface GetUsersProfileParams {
+export interface PatchUsersProfileParams {
   profile: Omit<User, 'id' | 'phone'>;
   phone: string;
 }
 
-export type GetUsersProfileConfig = RequestConfig<GetUsersProfileParams>;
+export type PatchUsersProfileConfig = RequestConfig<PatchUsersProfileParams>;
 
-interface GetUsersProfileResponse extends BaseResponse {
+interface PatchUsersProfileResponse extends BaseResponse {
   user: User;
 }
 
-export const getUsersProfile = async ({ params, config }: GetUsersProfileConfig) =>
-  api.patch<GetUsersProfileResponse>('/users/profile', params, config);
+export const patchUsersProfile = async ({ params, config }: PatchUsersProfileConfig) =>
+  api.patch<PatchUsersProfileResponse>('/users/profile', params, config);

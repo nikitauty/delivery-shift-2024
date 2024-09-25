@@ -1,14 +1,15 @@
 import { api } from '@api/instance.ts';
 import type { Order } from '@types';
 
-export interface GetDeliveryOrderParams {
+export interface GetDeliveryOrdersIdParams {
   id: string;
 }
-export type GetDeliveryOrderConfig = RequestConfig<GetDeliveryOrderParams>;
 
-interface GetDeliveryOrderResponse extends BaseResponse {
+export type GetDeliveryOrdersIdConfig = RequestConfig<GetDeliveryOrdersIdParams>;
+
+interface GetDeliveryOrdersIdResponse extends BaseResponse {
   order: Order;
 }
 
-export const getDeliveryOrdersId = async ({ config, params }: GetDeliveryOrderConfig) =>
-  api.get<GetDeliveryOrderResponse>(`/delivery/orders/${params.id}`, config);
+export const getDeliveryOrdersId = async ({ config, params }: GetDeliveryOrdersIdConfig) =>
+  api.get<GetDeliveryOrdersIdResponse>(`/delivery/orders/${params.id}`, config);
