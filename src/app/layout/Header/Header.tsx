@@ -1,5 +1,5 @@
 import React from 'react';
-import { redirect, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ExitIcon from '@icons/exit.svg?react';
 import TimeIcon from '@icons/time.svg?react';
 import UserIcon from '@icons/user.svg?react';
@@ -24,13 +24,14 @@ interface HeaderProps {
 
 export const Header = ({ mobile }: HeaderProps) => {
   const location = useLocation();
-  const [isLoggedIn, setIsLoggedIn] = React.useState(true);
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
 
   const onLogout = () => {
     //clearUser(); TODO: fix this
     localStorage.removeItem(AUTH_TOKEN);
     setIsLoggedIn(false);
-    redirect(getRouteMain());
+    navigate(getRouteMain());
   };
 
   if (mobile) return null;
@@ -66,7 +67,7 @@ export const Header = ({ mobile }: HeaderProps) => {
           </Button>
         </>
       ) : (
-        <Link to={getRouteAuth()} className={cls.link}>
+        <Link to={getRouteAuth()} className={cls.link} onClick={() => setIsLoggedIn(true)}>
           <ExitIcon className={cls.link_icon} />
           <Typography variant='typography16_medium'>Войти</Typography>
         </Link>
