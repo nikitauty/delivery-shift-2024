@@ -12,8 +12,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@ui/*": ["src/components/ui/*"],
-      "@icons/*": ["assets/icons/*"],
-      "@images/*": ["assets/images/*"],
+      "@icons/*": ["src/shared/assets/icons/*"],
+      "@images/*": ["src/shared/assets/images/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/shared/constants/*"],
       "@pages/*": ["src/pages/*"],
@@ -25,7 +25,7 @@
 
     /* Linting */
     "resolveJsonModule": true,
-    "types": ["node"],
+    "types": ["node", "vite-plugin-svgr/client"],
     "allowImportingTsExtensions": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
