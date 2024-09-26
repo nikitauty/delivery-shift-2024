@@ -1,7 +1,7 @@
 .select_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 0px;
 }
 
 .trigger {
@@ -9,7 +9,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid var(--text-quartenery-color);
   border-radius: 8px;
   background: var(--bg-primary);
@@ -38,7 +38,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid var(--border-light-color);
   border-radius: 8px;
   background: var(--bg-primary);
@@ -51,7 +51,7 @@
 .value_wrapper {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .label,

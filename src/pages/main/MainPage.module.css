@@ -13,7 +13,6 @@
   position: absolute;
   top: 115px;
   right: 0;
-  height: 500px;
   width: 489px;
   padding: 32px 72px;
   border-radius: 24px;
@@ -27,10 +26,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 524px;
 }
 
 .image {
-  width: 617px;
+  width: 667px;
 }
 
 .image_subtext {

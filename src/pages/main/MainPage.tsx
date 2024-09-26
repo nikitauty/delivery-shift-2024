@@ -60,7 +60,9 @@ const MainPage = () => {
             >
               {state.points?.map((point) => (
                 <SelectItem key={point.id} value={point.id}>
-                  {point.name}
+                  <Typography tag='div' variant='typography16_regular'>
+                    {point.name}
+                  </Typography>
                 </SelectItem>
               ))}
             </Select>
@@ -82,7 +84,9 @@ const MainPage = () => {
             >
               {state.points?.map((point) => (
                 <SelectItem key={point.id} value={point.id}>
-                  {point.name}
+                  <Typography tag='div' variant='typography16_regular'>
+                    {point.name}
+                  </Typography>
                 </SelectItem>
               ))}
             </Select>
@@ -104,7 +108,9 @@ const MainPage = () => {
             >
               {state.packageTypes?.map((_package) => (
                 <SelectItem key={_package.id} value={_package.id}>
-                  {_package.name}, {_package.height}x{_package.width}x{_package.length} см
+                  <Typography tag='div' variant='typography16_regular'>
+                    {_package.name}, {_package.height}x{_package.width}x{_package.length} см
+                  </Typography>
                 </SelectItem>
               ))}
             </Select>
@@ -116,7 +122,7 @@ const MainPage = () => {
           </Typography>
         )}
         <Button loading={state.loading.submitForm} type='submit'>
-          <Typography variant='typography16_regular'>Рассчитать</Typography>
+          <Typography variant='typography16_semibold'>Рассчитать</Typography>
         </Button>
       </form>
     </div>
