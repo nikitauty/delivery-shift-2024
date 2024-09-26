@@ -11,10 +11,10 @@
     /* Aliases */
     "paths": {
       "@/*": ["src/*"],
-      "@ui/*": ["src/shared/components/ui/*"],
+      "@ui/*": ["src/components/ui/*"],
       "@icons/*": ["assets/icons/*"],
       "@images/*": ["assets/images/*"],
-      "@components/*": ["src/shared/components/*"],
+      "@components/*": ["src/components/*"],
       "@constants/*": ["src/shared/constants/*"],
       "@pages/*": ["src/pages/*"],
       "@hooks/*": ["src/shared/hooks/*"],
