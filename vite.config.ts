@@ -9,20 +9,8 @@ export default defineConfig({
     react(),
     svgr({
       svgrOptions: {
-        icon: true,
-        exportType: 'named',
-        namedExport: 'ReactComponent',
-        svgo: true,
-        svgoConfig: {
-          plugins: [
-            {
-              name: 'removeViewBox',
-              active: false,
-            },
-          ],
-        },
+        // svgr options
       },
-      include: '**/*.svg',
     }),
   ],
   publicDir: path.resolve(__dirname, 'assets'),
