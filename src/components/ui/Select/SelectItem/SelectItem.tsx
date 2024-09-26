@@ -2,7 +2,7 @@ import React from 'react';
 import { CheckIcon } from '@radix-ui/react-icons';
 import * as SelectPrimitive from '@radix-ui/react-select';
 
-import cls from './SelectItem.module.scss';
+import cls from './SelectItem.module.css';
 
 export const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,

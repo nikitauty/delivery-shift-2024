@@ -4,7 +4,7 @@ import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import clsx from 'clsx';
 
-import cls from './Select.module.scss';
+import cls from './Select.module.css';
 
 interface SelectProps extends SelectPrimitive.SelectProps {
   label?: string;
