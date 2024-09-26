@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  overflow: hidden;
+}
+
 li {
   list-style-type: none;
 }
