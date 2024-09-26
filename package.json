@@ -13,6 +13,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-select": "^2.1.1",
     "@tanstack/react-query": "^5.55.0",
     "axios": "^1.7.7",
     "clsx": "^2.1.1",
@@ -20,7 +23,9 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
     "react-number-format": "^5.4.2",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^6.26.2",
+    "zod": "^3.23.8",
+    "zustand": "^5.0.0-rc.2"
   },
   "devDependencies": {
     "@nikitau/eslint": "^2.0.2",
