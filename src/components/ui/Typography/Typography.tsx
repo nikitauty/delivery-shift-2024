@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import cls from './Typography.module.scss';
+import cls from './Typography.module.css';
 
 type TypographyVariant =
   // Regular
