@@ -11,6 +11,7 @@ export default eslint(
   {
     rules: {
       'nikitau-react/prop-types': 'off',
+      'nikitau-react/display-name': 'off',
     },
   }
 );
