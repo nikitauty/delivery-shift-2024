@@ -11,3 +11,11 @@ declare module '*.svg' {
   const SVG: React.FC<React.SVGProps<SVGSVGElement>>;
   export default SVG;
 }
+
+declare module '*.css' {
+  interface IClassNames {
+    [className: string]: string;
+  }
+  const classNames: IClassNames;
+  export = classNames;
+}
