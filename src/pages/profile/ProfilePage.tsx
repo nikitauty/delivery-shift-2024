@@ -1,3 +1,5 @@
+import { Typography } from '@/components/ui/Typography';
+
 export const ProfilePage = () => {
-  return <div></div>;
+  return <Typography variant='typography24_medium'>Профиль</Typography>;
 };
