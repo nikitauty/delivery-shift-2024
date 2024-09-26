@@ -116,7 +116,7 @@ const MainPage = () => {
           </Typography>
         )}
         <Button loading={state.loading.submitForm} type='submit'>
-          Рассчитать
+          <Typography variant='typography16_regular'>Рассчитать</Typography>
         </Button>
       </form>
     </div>

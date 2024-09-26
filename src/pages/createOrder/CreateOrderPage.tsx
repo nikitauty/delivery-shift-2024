@@ -1,3 +1,5 @@
+import { Typography } from '@/components/ui/Typography';
+
 export const CreateOrderPage = () => {
-  return <div></div>;
+  return <Typography variant='typography24_medium'>Заказы пока не работают))))</Typography>;
 };
