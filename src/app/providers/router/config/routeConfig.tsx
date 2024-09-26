@@ -2,7 +2,7 @@ import type { RouteProps } from 'react-router-dom';
 
 import { AuthPage } from '@/pages/auth/AuthPage';
 import { CreateOrderPage } from '@/pages/createOrder/CreateOrderPage';
-import { MainPage } from '@/pages/main/MainPage';
+import MainPage from '@/pages/main/MainPage';
 import { OrderDetails } from '@/pages/orderDetails/OrderDetails';
 import { OrdersPage } from '@/pages/orders/OrdersPage';
 import { PaymentPage } from '@/pages/payment/PaymentPage';
