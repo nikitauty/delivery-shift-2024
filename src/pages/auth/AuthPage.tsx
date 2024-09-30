@@ -11,7 +11,7 @@ import { useAuthPage } from './hooks/useAuthPage';
 
 import cls from './AuthPage.module.css';
 
-export const AuthPage = () => {
+const AuthPage = () => {
   const { state, functions, form } = useAuthPage();
 
   return (
@@ -20,7 +20,7 @@ export const AuthPage = () => {
       <Typography tag='p' variant='typography16_regular'>
         Введите номер телефона для входа <br /> в личный кабинет
       </Typography>
-      <form onSubmit={functions.onSubmit} className={cls.sign_in_form_wrapper}>
+      <form onSubmit={functions.onSubmit} className={cls.form_wrapper}>
         <Controller
           name='phone'
           control={form.control}
@@ -60,7 +60,9 @@ export const AuthPage = () => {
           className={cls.continue_button}
           variant='primary_filled'
         >
-          {state.stage === 'phone' ? 'Продолжить' : 'Войти'}
+          <Typography variant='typography16_medium'>
+            {state.stage === 'phone' ? 'Продолжить' : 'Войти'}
+          </Typography>
         </Button>
         {state.stage === 'otp' && (
           <CountDownButton
@@ -73,3 +75,5 @@ export const AuthPage = () => {
     </div>
   );
 };
+
+export default AuthPage;

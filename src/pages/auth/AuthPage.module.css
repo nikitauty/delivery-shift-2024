@@ -3,9 +3,11 @@
   flex-direction: column;
   gap: 24px;
 
-  .input {
-    width: 464px;
-    font-family: var(--font-family-main);
+  .form_wrapper {
+    display: flex;
+    width: 328px;
+    flex-direction: column;
+    gap: 24px;
   }
 
   .button {
