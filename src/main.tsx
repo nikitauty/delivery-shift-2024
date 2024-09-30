@@ -5,17 +5,16 @@ import { getUsersSession } from '@api/requests/users/session/index.ts';
 
 import { App } from './app/App.tsx';
 import { TanStackQueryProvider } from './app/providers/TanStackQueryProvider';
+import { AUTH_TOKEN } from './shared/constants/localstorage.ts';
+import { useUserStore } from './shared/store/hooks/useUserStore.ts';
 
 import '@/app/styles/index.css';
 const init = async () => {
-  const token = localStorage.getItem('AUTH_TOKEN');
+  const token = localStorage.getItem(AUTH_TOKEN);
 
   if (token) {
-    const getUsersSessionResponse = await getUsersSession();
-
-    const user = { isLoggedIn: true, ...getUsersSessionResponse.data.user };
-
-    console.log(user);
+    const getUserResponse = await getUsersSession();
+    useUserStore.setState({ isLoggedIn: true, user: getUserResponse.data.user });
   }
 
   createRoot(document.getElementById('root')!).render(

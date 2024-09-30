@@ -1,5 +1,4 @@
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import ExitIcon from '@icons/exit.svg?react';
 import TimeIcon from '@icons/time.svg?react';
 import UserIcon from '@icons/user.svg?react';
@@ -15,6 +14,7 @@ import {
   getRouteOrders,
   getRouteProfile,
 } from '@/shared/constants/router';
+import { useUserStore } from '@/shared/store/hooks/useUserStore';
 
 import cls from './Header.module.css';
 
@@ -24,14 +24,15 @@ interface HeaderProps {
 
 export const Header = ({ mobile }: HeaderProps) => {
   const location = useLocation();
-  const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+
+  const { isLoggedIn } = useUserStore();
+  const { clearUser } = useUserStore();
+
+  console.log(isLoggedIn);
 
   const onLogout = () => {
-    //clearUser(); TODO: fix this
+    clearUser();
     localStorage.removeItem(AUTH_TOKEN);
-    setIsLoggedIn(false);
-    navigate(getRouteMain());
   };
 
   if (mobile) return null;
