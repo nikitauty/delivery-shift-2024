@@ -63,13 +63,17 @@ export const Header = ({ mobile }: HeaderProps) => {
           </div>
           <Button className={cls.exit_button} onClick={onLogout} variant='clear'>
             <ExitIcon className={cls.button_icon} />
-            <Typography variant='typography16_medium'>Выйти</Typography>
+            <Typography variant='typography16_regular'>Выйти</Typography>
           </Button>
         </>
       ) : (
-        <Link to={getRouteAuth()} className={cls.link} onClick={() => setIsLoggedIn(true)}>
+        <Link
+          to={getRouteAuth()}
+          className={cls.link}
+          isActive={location.pathname === getRouteAuth()}
+        >
           <ExitIcon className={cls.link_icon} />
-          <Typography variant='typography16_medium'>Войти</Typography>
+          <Typography variant='typography16_regular'>Войти</Typography>
         </Link>
       )}
     </header>
