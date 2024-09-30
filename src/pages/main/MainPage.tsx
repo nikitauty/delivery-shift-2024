@@ -18,7 +18,7 @@ const MainPage = () => {
 
   if (state.loading.getSelectItems) {
     return (
-      <div className={cls.main_page_wrapper}>
+      <div className={cls.page_wrapper}>
         <div className={cls.image_wrapper}>
           <img className={cls.image} src={globeImage} alt='globe' />
           <Typography tag='h1' className={cls.image_subtext} variant='typography32_semibold'>
@@ -34,7 +34,7 @@ const MainPage = () => {
   }
 
   return (
-    <div className={cls.main_page_wrapper}>
+    <div className={cls.page_wrapper}>
       <div className={cls.image_wrapper}>
         <img className={cls.image} src={globeImage} alt='globe' />
         <Typography tag='h1' className={cls.image_subtext} variant='typography32_semibold'>
@@ -42,6 +42,11 @@ const MainPage = () => {
           <br /> удобно, надежно!
         </Typography>
       </div>
+      {state.loading.getSelectItems ? (
+        <form onSubmit={functions.onSubmit} className={cls.form_wrapper_loader}>
+          <Loader />
+        </form>
+      ) : null}
       <form onSubmit={functions.onSubmit} className={cls.form_wrapper}>
         <Typography variant='typography24_semibold'>Рассчитать доставку</Typography>
         <Controller
