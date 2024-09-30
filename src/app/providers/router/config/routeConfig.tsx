@@ -1,12 +1,12 @@
 import type { RouteProps } from 'react-router-dom';
 
-import { AuthPage } from '@/pages/auth/AuthPage';
+import { AuthPage } from '@/pages/auth';
 import { CreateOrderPage } from '@/pages/createOrder/CreateOrderPage';
-import MainPage from '@/pages/main/MainPage';
+import { MainPage } from '@/pages/main';
 import { OrderDetails } from '@/pages/orderDetails/OrderDetails';
 import { OrdersPage } from '@/pages/orders/OrdersPage';
 import { PaymentPage } from '@/pages/payment/PaymentPage';
-import { ProfilePage } from '@/pages/profile/ProfilePage';
+import { ProfilePage } from '@/pages/profile';
 import {
   AppRoutes,
   getRouteAuth,
