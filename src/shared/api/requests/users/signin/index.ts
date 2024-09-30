@@ -1,13 +1,17 @@
 import { api } from '@api/instance';
 
+import type { User } from '@/shared/types';
+
 interface PostUsersSignInParams {
   phone: string;
+  code: number;
 }
 
 export type PostUsersSignInConfig = RequestConfig<PostUsersSignInParams>;
 
-interface PostUsersSignInResponse extends Response {
-  retryDelay: number;
+interface PostUsersSignInResponse extends BaseResponse {
+  user: User;
+  token: string;
 }
 
 export const postUsersSignIn = async ({ params, config }: PostUsersSignInConfig) =>
