@@ -10,11 +10,14 @@ interface SelectProps extends SelectPrimitive.SelectProps {
   label?: string;
   Icon?: React.FC<SVGProps<SVGSVGElement>>;
   error?: { error: boolean; message?: string };
+  className?: string;
 }
 
 export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
-  ({ children, label, Icon, error, ...props }, ref) => (
-    <div className={clsx(cls.select_wrapper, { [cls.select_wrapper_error]: error?.error })}>
+  ({ children, label, Icon, error, className, ...props }, ref) => (
+    <div
+      className={clsx(cls.select_wrapper, { [cls.select_wrapper_error]: error?.error, className })}
+    >
       {label && <p className={cls.label}>{label}</p>}
       <SelectPrimitive.Root {...props}>
         <SelectPrimitive.Trigger className={cls.trigger} ref={ref}>

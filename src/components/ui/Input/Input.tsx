@@ -5,7 +5,7 @@ import type {
   ReactElement,
   ReactNode,
 } from 'react';
-import { forwardRef, useId } from 'react';
+import React from 'react';
 import type { JSX } from 'react/jsx-runtime';
 import clsx from 'clsx';
 
@@ -24,12 +24,12 @@ type InputProps<
   component?: Component;
 } & ComponentProps<Component>;
 
-export const Input = forwardRef(
+export const Input = React.forwardRef(
   (
     { label, className, component, error, id: externalId, ...props }: InputProps<'input'>,
     ref: ForwardedRef<HTMLInputElement>
   ) => {
-    const internalId = useId();
+    const internalId = React.useId();
     const id = externalId ?? internalId;
 
     const Component = component ?? 'input';
